@@ -10,6 +10,6 @@ router.get('/',lieuController.lieu_list);
 router.get('/:id',lieuController.lieu_detail);
 
 //POST one lieu
-router.post('/',lieuController.lieu_ajout_post);
+router.post('/ajoutLieu',lieuController.lieu_ajout_post);
 
 module.exports = router;
