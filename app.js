@@ -8,7 +8,9 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var offres = require('./routes/offres');
-
+var lieux = require('./routes/lieu');
+var modelLieu = require('./models/lieu');
+modelLieu.chargerLieux();
 var app = express();
 
 // view engine setup
@@ -26,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/offres', offres);
 app.use('/users', users);
+app.use('/lieux',lieux);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

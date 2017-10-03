@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 
-var lieuController = require('../controllers/lieuController');
+let lieuController = require('../controllers/lieuController');
 
 //GET all lieu
 router.get('/',lieuController.lieu_list);

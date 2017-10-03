@@ -1,6 +1,10 @@
+var Lieu = require('../models/lieu');
+
 // Display list of all Offres
 exports.lieu_list = function(req, res, next) {
-    res.send('NOT IMPLEMENTED: lieu list');
+    let listeLieux = Lieu.getLesLieuxJSON();
+
+    res.render('Lieu/lieu', { title: 'Gestion des lieux',listeLieux : listeLieux });
 };
 // Display detail page for a specific Offre
 exports.lieu_detail = function(req, res, next) {
